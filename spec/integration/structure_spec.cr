@@ -30,19 +30,19 @@ describe "Integration · document structure" do
 
   it "ignores <script>, <style>, <meta> and <link> tags in <head>" do
     html = <<-HTML
-    <html>
-    <head>
-      <title>ignored</title>
-      <meta charset="utf-8"/>
-      <link rel="stylesheet" href="x.css"/>
-      <style>body { color: red; }</style>
-      <script>alert('boom')</script>
-    </head>
-    <body>
-      <p>Visible body text.</p>
-    </body>
-    </html>
-    HTML
+      <html>
+      <head>
+        <title>ignored</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="x.css"/>
+        <style>body { color: red; }</style>
+        <script>alert('boom')</script>
+      </head>
+      <body>
+        <p>Visible body text.</p>
+      </body>
+      </html>
+      HTML
     result = IntegrationHelper.convert(html)
     result.should contain("Visible body text.")
     # None of the <head> content should leak into the Markdown output

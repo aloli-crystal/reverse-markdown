@@ -3,6 +3,10 @@
 :toc-title: Versions
 :toclevels: 2
 
+== v3.0.2.5 — 2026-10-16
+
+* ameba 1.7 et Crystal 1.22.0 en CI ; nouvelles règles appliquées, aucun changement de comportement.
+
 == v3.0.2.4 — 2026-07-28
 
 * Renomme le shard `crystal-reverse-markdown` → `reverse-markdown` (abandon du

@@ -368,9 +368,9 @@ module ReverseMarkdown
     end
 
     private def has_table_header?(node : XML::Node) : Bool
-      node.children.any? { |child|
+      node.children.any? do |child|
         child.type.element_node? && child.name.downcase == "thead"
-      }
+      end
     end
 
     private def convert_sup(node : XML::Node, *, depth : Int32) : String

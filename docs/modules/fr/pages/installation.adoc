@@ -9,7 +9,7 @@ Ajoutez reverse-markdown dans votre `shard.yml` :
 dependencies:
   reverse-markdown:
     github: aloli-crystal/reverse-markdown
-    version: "~> 3.0.2.4"
+    version: "~> 3.0.2.5"
 ----
 
 Puis lancez :
